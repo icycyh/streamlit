@@ -240,7 +240,7 @@ date_l = ["11/16/2020", "11/17/2020", "11/18/2020", "11/19/2020"]
 
 terms = ['1M','3M','6M']
 
-def calc_term_rate_list():
+def calc_term_rate_list(M):
 	array = []
 	for month_len in [1, 3, 6]:
 	    tmp_l = []
@@ -291,11 +291,10 @@ report_data = {'Rate Changing Dates': MPC_dates_raw,
 st.write(pd.DataFrame(report_data))
 
 
-
-array = calc_term_rate_list()
 M = df.values[0,0]
 date = df.values[0,1]
 term = df.values[0,2]
+array = calc_term_rate_list(M)
 
 
 st.subheader('Calculate term rate')
