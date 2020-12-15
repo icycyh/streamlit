@@ -252,7 +252,7 @@ def calc_term_rate_list():
 	            if quote is not None:
 	                futures.append(100-quote)
 	        A, b = get_mat_A(date_l[i], month_len, MPC_dates_raw, futures, FFact)
-	        x = solve_eq(A, b, 0.7)
+	        x = solve_eq(A, b, M)
 	        tmp_l.append(calculate_term_rate(date_l[i], month_len, MPC_dates_raw, x))
 	    array.append(tmp_l)
 	return array
@@ -293,6 +293,7 @@ st.write(pd.DataFrame(report_data))
 
 
 array = calc_term_rate_list()
+M = df.values[0,0]
 date = df.values[0,1]
 term = df.values[0,2]
 
