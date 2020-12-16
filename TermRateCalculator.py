@@ -257,7 +257,7 @@ def calc_term_rate_list(M):
 
 ###############################################################
 st.write("""
-# EY SOFR Calculate App Demo
+# ARR Term Rate Calculator
 
 This app present the term rate of SOFR based on the future implied
 term rate estimation approach proposed by ARRC.
