@@ -282,21 +282,19 @@ df = user_input_features()
 
 st.subheader('User Input parameters')
 st.write(df)
-st.subheader('Report')
-report_data = {'Rate Changing Dates': MPC_dates_raw,
-			}
-st.write(pd.DataFrame(report_data))
-
 
 M = df.values[0,0]
 date = df.values[0,1]
 term = df.values[0,2]
 array = calc_term_rate_list(M)
 
-
 st.subheader('Calculate term rate')
 st.write(array[terms.index(term)][date_l.index(date)])
 
+st.subheader('Report')
+report_data = {'Rate Changing Dates': MPC_dates_raw,
+			}
+st.write(pd.DataFrame(report_data))
 
 st.subheader('Comparison with CME/ICE - '+df.values[0,2]+' term rate')
 chart_data = pd.DataFrame({
