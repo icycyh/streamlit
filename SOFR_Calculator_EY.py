@@ -1,7 +1,6 @@
-# EY SOFR Calculate
+# EY SOFR Calculator
 # UChicago Project Lab
 # for streamlit
-# version 3.0
 
 import streamlit as st
 import pandas as pd
@@ -278,7 +277,6 @@ def user_input_features():
 			'Term': mon_len}
 	features = pd.DataFrame(data,index=[0])
 	return features
-
 
 
 df = user_input_features()
