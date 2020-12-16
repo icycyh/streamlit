@@ -1,4 +1,5 @@
-# EY SOFR Calculator
+# ARR Term Rate Calculator
+# EY
 # UChicago Project Lab
 # for streamlit
 
