@@ -306,3 +306,6 @@ chart_data = pd.DataFrame({
 chart_data.set_index('date',inplace=True)
 
 st.line_chart(chart_data)
+
+t1 = pd.read_csv('try1.csv')
+st.write(t1)
